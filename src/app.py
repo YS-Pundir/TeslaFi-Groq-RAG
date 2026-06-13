@@ -8,6 +8,7 @@ GROQ_MODEL= "llama-3.3-70b-versatile"
 client=Groq(api_key=api_key)
 
 # Load the tools
+import gradio as gr
 import json
 from langchain_chroma import Chroma
 from langchain_huggingface import HuggingFaceEmbeddings
@@ -169,5 +170,14 @@ def multi_turn_rag_chat():
     if turn_count == MAX_STEPS:
         print(f"\nMaximum turns ({MAX_STEPS}) reached. Chat session ended.")
 
+
+
+
 # --- Run the chat ---
 multi_turn_rag_chat()
+
+
+
+
+
+
